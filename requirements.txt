@@ -1,0 +1,4 @@
+pandas>=0.19
+streamlit
+numpy>=1.9.2
+statsmodels
