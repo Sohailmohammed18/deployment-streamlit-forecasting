@@ -5,7 +5,6 @@ import warnings
 warnings.filterwarnings("ignore")
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 import streamlit as st 
-import matplotlib.pyplot as plt
 st.title('Time Series Forecasting')
 st.sidebar.header('User Input Parameters')
 Total_beds = st.sidebar.number_input("Insert the number of Total beds")
