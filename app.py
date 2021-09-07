@@ -33,10 +33,8 @@ r=pd.date_range(start='2020-06-15',end='2021-06-15')
 df3=df2.reindex(r).rename_axis('date').reset_index()
 df3=df3.set_index('date')
 df4 = df3.interpolate(method='time', axis=0)
-train = df4.iloc[0:280,:]
-test = df4.iloc[280:,:]
-hwe_model_add_sea = ExponentialSmoothing(train["Available_beds"],seasonal="add",seasonal_periods=12).fit() #add the trend to the model
-pred_hwe_add_sea_test = hwe_model_add_sea.predict(start = test.index[0],end = test.index[-1])
+hwe_model_add_sea = ExponentialSmoothing(df4["Available_beds"],seasonal="add",seasonal_periods=12).fit() #add the trend to the model
+pred_hwe_add_sea_test = hwe_model_add_sea.predict(start = df4.index[0],end = df4.index[-1])
 input=Days
 prediction=hwe_model_add_sea.forecast(input)
 st.subheader('Predicted Result')
