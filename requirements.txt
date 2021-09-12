@@ -1,6 +1,7 @@
 
 pystan
 fbprophet
+httpstan>=4.6
 pandas>=0.19
 streamlit
 statsmodels
