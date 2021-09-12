@@ -1,6 +1,6 @@
+pystan
+fbprophet
 pandas>=0.19
 streamlit
 statsmodels
-pystan
-fbprophet
 plotly
